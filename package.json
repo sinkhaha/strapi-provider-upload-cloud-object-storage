@@ -1,0 +1,35 @@
+{
+  "name": "strapi-provider-upload-cloud-object-storage",
+  "version": "1.0.0",
+  "description": "a provider for strapi server to upload file to tencent cos",
+  "main": "./dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w --preserveWatchOutput",
+    "clean": "rimraf ./dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
+    "preversion": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .ts src/"
+  },
+  "author": "sinkhaha",
+  "license": "MIT",
+  "dependencies": {
+    "cos-nodejs-sdk-v5": "^2.12.1",
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8",
+    "@types/node": "^16.18.34",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "eslint": "^8.42.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "rimraf": "^5.0.1",
+    "tsconfig": "^7.0.0",
+    "typescript": "5.0.4"
+  }
+}
